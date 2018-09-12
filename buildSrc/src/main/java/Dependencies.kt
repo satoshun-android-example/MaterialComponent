@@ -31,6 +31,7 @@ object Libs {
   val media2 = "androidx.media2:media2:1.0.0-alpha02"
 
   val material = "com.google.android.material:material:1.0.0-rc02"
+  val coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.0.0-rc02"
   val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
   val browser = "androidx.browser:browser:1.0.0-rc02"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha05"
