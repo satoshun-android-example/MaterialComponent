@@ -25,11 +25,18 @@ class AppbarBottom2Fragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     button.setOnClickListener {
+      fab.hide()
+      activity!!.invalidateOptionsMenu()
+
       activity!!.supportFragmentManager.popBackStack()
     }
 
-    bottomAppBar.navigationIcon = null
-    bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
-    bottomAppBar.replaceMenu(R.menu.frag2)
+    view.postDelayed({
+      bottomAppBar.navigationIcon = null
+      bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
+      bottomAppBar.replaceMenu(R.menu.frag2)
+
+      fab.show()
+    }, 100)
   }
 }

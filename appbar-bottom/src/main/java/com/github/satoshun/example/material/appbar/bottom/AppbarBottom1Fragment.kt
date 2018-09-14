@@ -25,6 +25,8 @@ class AppbarBottom1Fragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     button.setOnClickListener {
+      fab.hide()
+
       activity!!.supportFragmentManager
           .beginTransaction()
           .replace(R.id.container, AppbarBottom2Fragment(), "this")
@@ -32,8 +34,13 @@ class AppbarBottom1Fragment : Fragment() {
           .commit()
     }
 
-    bottomAppBar.setNavigationIcon(R.drawable.ic_menu_24)
-    bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
-    bottomAppBar.replaceMenu(R.menu.frag1)
+
+    view.postDelayed({
+      bottomAppBar.setNavigationIcon(R.drawable.ic_menu_24)
+      bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
+      bottomAppBar.replaceMenu(R.menu.frag1)
+
+      fab.show()
+    }, 100)
   }
 }
