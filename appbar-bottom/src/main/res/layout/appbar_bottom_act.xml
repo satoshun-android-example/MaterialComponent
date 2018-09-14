@@ -1,23 +1,25 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <!-- Other components and views -->
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
 
   <com.google.android.material.bottomappbar.BottomAppBar
       android:id="@+id/bar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="bottom"
-      app:navigationIcon="@drawable/ic_menu_24"/>
+      app:navigationIcon="@drawable/ic_menu_24" />
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/fab"
-      android:src="@drawable/ic_android_black_24dp"
-      android:tint="@color/colorPrimaryDark"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      app:layout_anchor="@id/bar"/>
+      android:src="@drawable/ic_android_black_24dp"
+      android:tint="@color/colorPrimaryDark"
+      app:layout_anchor="@id/bar" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
