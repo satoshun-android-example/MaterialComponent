@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,36 +11,31 @@
       android:layout_margin="16dp"
       android:orientation="vertical">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/input_groups"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="FIRST VIEW" />
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="show snackbar" />
+      <com.google.android.material.chip.Chip
+          android:id="@+id/input_chip1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Mail"
+          app:chipIcon="@drawable/ic_mail_black_24dp"
+          app:chipIconTint="@color/design_default_color_primary"
+          app:closeIconVisible="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:text="hoge1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:text="hoge2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:text="hoge3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:text="hoge4" />
+      <com.google.android.material.chip.Chip
+          android:id="@+id/input_chip2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Search"
+          app:chipIcon="@drawable/ic_search_black_24dp"
+          app:chipIconTint="@color/design_default_color_primary"
+          app:closeIconVisible="true" />
+    </com.google.android.material.chip.ChipGroup>
   </LinearLayout>
 </androidx.core.widget.NestedScrollView>
