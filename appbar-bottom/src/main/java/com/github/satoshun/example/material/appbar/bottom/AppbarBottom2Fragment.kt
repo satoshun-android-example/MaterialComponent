@@ -31,6 +31,7 @@ class AppbarBottom2Fragment : Fragment() {
       activity!!.supportFragmentManager.popBackStack()
     }
 
+    // todo use FloatingActionButton.OnVisibilityChangedListener
     view.postDelayed({
       bottomAppBar.navigationIcon = null
       bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END

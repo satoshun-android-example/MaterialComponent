@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.appbar_bottom1_frag.*
 
 class AppbarBottom1Fragment : Fragment() {
@@ -27,14 +28,30 @@ class AppbarBottom1Fragment : Fragment() {
     button.setOnClickListener {
       fab.hide()
 
-      activity!!.supportFragmentManager
+      activity!!
+          .supportFragmentManager
           .beginTransaction()
           .replace(R.id.container, AppbarBottom2Fragment(), "this")
           .addToBackStack("this")
           .commit()
     }
 
+    // todo snackbar upper fab button
+    button2.setOnClickListener {
+      val snackbar = Snackbar.make(rootView, "snackbar", Snackbar.LENGTH_SHORT)
+      val snackbarView = snackbar.view
+      val params = snackbarView.layoutParams as ViewGroup.MarginLayoutParams
+      params.setMargins(
+          params.leftMargin,
+          params.topMargin,
+          params.rightMargin,
+          params.bottomMargin
+      )
+      snackbarView.layoutParams = params
+      snackbar.show()
+    }
 
+    // todo use FloatingActionButton.OnVisibilityChangedListener
     view.postDelayed({
       bottomAppBar.setNavigationIcon(R.drawable.ic_menu_24)
       bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
