@@ -1,2 +1,3 @@
 include ':text-field'
 include ':appbar-bottom'
+include ':chips'
