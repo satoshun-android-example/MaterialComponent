@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.postDelayed
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -24,20 +25,28 @@ class AppbarBottom2Fragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    button.setOnClickListener {
+    fun moveToBack() {
       fab.hide()
       activity!!.invalidateOptionsMenu()
 
       activity!!.supportFragmentManager.popBackStack()
     }
 
+    back.setOnClickListener {
+      moveToBack()
+    }
+
+    button.setOnClickListener {
+      moveToBack()
+    }
+
     // todo use FloatingActionButton.OnVisibilityChangedListener
-    view.postDelayed({
+    view.postDelayed(100) {
       bottomAppBar.navigationIcon = null
       bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
       bottomAppBar.replaceMenu(R.menu.frag2)
 
       fab.show()
-    }, 100)
+    }
   }
 }
