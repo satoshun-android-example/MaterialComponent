@@ -1,0 +1,15 @@
+<resources>
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="Widget.MaterialComponents.Chip.Error" parent="Base.Widget.MaterialComponents.Chip">
+    <item name="closeIconVisible">true</item>
+
+    <item name="chipBackgroundColor">#FFa9B4</item>
+    <item name="closeIconTint">#FF3355</item>
+  </style>
+</resources>
