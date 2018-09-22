@@ -4,7 +4,7 @@ object Vers {
   val target_sdk = 28
 
   val kotlin = "1.2.70"
-  val couroutine = "0.26.0"
+  val couroutine = "0.26.1"
 }
 
 object Libs {
@@ -36,6 +36,8 @@ object Libs {
   val emoji = "androidx.emoji:emoji:1.0.0"
   val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
+
+  val coroutine_binding = "com.github.satoshun.coroutinebinding:coroutinebinding:0.1.1"
 
   val multidex = "com.android.support:multidex:1.0.3"
 

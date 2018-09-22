@@ -31,8 +31,18 @@ dependencies {
   implementation Libs.constraintlayout
   implementation Libs.recyclerview
 
+  implementation Libs.coroutine
+  implementation Libs.ui_coroutine
+  implementation Libs.coroutine_binding
+
   testImplementation Libs.junit
 
   androidTestImplementation Libs.test_runner
   androidTestImplementation Libs.espresso
+}
+
+kotlin {
+  experimental {
+    coroutines 'enable'
+  }
 }
