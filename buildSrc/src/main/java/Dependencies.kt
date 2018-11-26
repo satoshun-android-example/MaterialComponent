@@ -3,12 +3,12 @@ object Vers {
   val min_sdk = 24
   val target_sdk = 28
 
-  val kotlin = "1.2.71"
-  val couroutine = "0.26.1"
+  val kotlin = "1.3.10"
+  val couroutine = "1.0.0"
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0"
+  val android_plugin = "com.android.tools.build:gradle:3.2.1"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
@@ -25,7 +25,7 @@ object Libs {
 
   val material = "com.google.android.material:material:1.0.0"
   val coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
-  val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
+  val paging = "androidx.paging:paging-runtime:2.0.0"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:1.0.0"
 
