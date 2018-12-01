@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
-import com.github.satoshun.coroutinebinding.view.click
+import com.github.satoshun.coroutinebinding.view.awaitClick
 import kotlinx.android.synthetic.main.card_frag.*
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CardFragment : BaseFragment() {
   override fun onCreateView(
@@ -22,9 +23,9 @@ class CardFragment : BaseFragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    launch {
+    GlobalScope.launch {
       while (true) {
-        expand.click()
+        expand.awaitClick()
         expand.isGone = true
 
         expanded_title.isVisible = true
@@ -33,9 +34,9 @@ class CardFragment : BaseFragment() {
       }
     }
 
-    launch {
+    GlobalScope.launch {
       while (true) {
-        collapse.click()
+        collapse.awaitClick()
         expanded_title.isGone = true
         collapse.isGone = true
         action_group.isGone = true
