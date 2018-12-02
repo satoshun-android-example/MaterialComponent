@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="16dp"
+  tools:ignore="HardcodedText">
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/slide"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:ignore="HardcodedText">
-</androidx.core.widget.NestedScrollView>
+    android:layout_height="wrap_content"
+    android:text="Slide"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/fade"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Fade"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/slide" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/animationTest"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Animation Test"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/fade" />
+</androidx.constraintlayout.widget.ConstraintLayout>
