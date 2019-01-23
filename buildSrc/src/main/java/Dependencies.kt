@@ -8,7 +8,7 @@ object Vers {
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.2.1"
+  const val android_plugin = "com.android.tools.build:gradle:3.3.0"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
@@ -23,7 +23,7 @@ object Libs {
   const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   const val cardview = "androidx.cardview:cardview:1.0.0"
 
-  const val material = "com.google.android.material:material:1.1.0-alpha01"
+  const val material = "com.google.android.material:material:1.1.0-alpha02"
   const val coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
 
   const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
