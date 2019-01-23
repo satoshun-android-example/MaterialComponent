@@ -1,15 +1,19 @@
 package com.github.satoshun.example.material.datepicker
 
+import android.app.TimePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TimePicker
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.github.satoshun.coroutinebinding.view.awaitClick
 import kotlinx.android.synthetic.main.date_picker_frag.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.*
+import kotlin.math.min
 
 class DatePickerFragment : BaseFragment() {
   override fun onCreateView(
@@ -23,25 +27,23 @@ class DatePickerFragment : BaseFragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    GlobalScope.launch {
+    launch {
       while (true) {
-        expand.awaitClick()
-        expand.isGone = true
-
-        expanded_title.isVisible = true
-        collapse.isVisible = true
-        action_group.isVisible = true
-      }
-    }
-
-    GlobalScope.launch {
-      while (true) {
-        collapse.awaitClick()
-        expanded_title.isGone = true
-        collapse.isGone = true
-        action_group.isGone = true
-
-        expand.isVisible = true
+        time_picker.awaitClick()
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = calendar.get(Calendar.MINUTE)
+        val dialog = TimePickerDialog(
+          activity,
+          0,
+          TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            // todo
+          },
+          hour,
+          minute,
+          false
+        )
+        dialog.show()
       }
     }
   }
