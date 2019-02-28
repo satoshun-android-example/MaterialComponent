@@ -9,8 +9,16 @@
     android:id="@+id/title"
     android:layout_width="wrap_content"
     android:layout_height="64dp"
+    android:gravity="center"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     tools:text="TITLE" />
+
+  <com.google.android.material.checkbox.MaterialCheckBox
+    android:id="@+id/checkbox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBaseline_toBaselineOf="@id/title"
+    app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
