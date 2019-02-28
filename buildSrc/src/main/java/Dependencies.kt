@@ -34,6 +34,8 @@ object Libs {
   const val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   const val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
 
+  const val groupie = "com.xwray:groupie:2.3.0"
+
   const val coroutine_binding = "com.github.satoshun.coroutinebinding:coroutinebinding:1.0.0-RC1"
 
   const val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
