@@ -13,7 +13,7 @@ abstract class BaseFragment : Fragment(), CoroutineScope {
   override val coroutineContext: CoroutineContext
     get() = job + Dispatchers.Main
 
-  override fun onAttach(context: Context?) {
+  override fun onAttach(context: Context) {
     super.onAttach(context)
     job = Job()
   }

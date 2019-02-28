@@ -65,8 +65,8 @@ class SnackbarFragment : Fragment() {
 private fun View.getAlphaAnimator(vararg alphaValues: Float): ValueAnimator {
   val animator = ValueAnimator.ofFloat(*alphaValues)
   animator.interpolator = LINEAR_INTERPOLATOR
-  animator.addUpdateListener { animator ->
-    alpha = animator.animatedValue as Float
+  animator.addUpdateListener { v ->
+    alpha = v.animatedValue as Float
   }
   return animator
 }
@@ -74,8 +74,8 @@ private fun View.getAlphaAnimator(vararg alphaValues: Float): ValueAnimator {
 private fun View.getScaleAnimator(vararg scaleValues: Float): ValueAnimator {
   val animator = ValueAnimator.ofFloat(*scaleValues)
   animator.interpolator = LINEAR_OUT_SLOW_IN_INTERPOLATOR
-  animator.addUpdateListener { animator ->
-    val scale = animator.animatedValue as Float
+  animator.addUpdateListener { v ->
+    val scale = v.animatedValue as Float
     scaleX = scale
     scaleY = scale
   }

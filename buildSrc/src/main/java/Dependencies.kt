@@ -3,12 +3,12 @@ object Vers {
   const val min_sdk = 24
   const val target_sdk = 28
 
-  const val kotlin = "1.3.10"
-  const val couroutine = "1.0.1"
+  const val kotlin = "1.3.21"
+  const val couroutine = "1.1.0"
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.3.0"
+  const val android_plugin = "com.android.tools.build:gradle:3.3.1"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
@@ -23,7 +23,7 @@ object Libs {
   const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   const val cardview = "androidx.cardview:cardview:1.0.0"
 
-  const val material = "com.google.android.material:material:1.1.0-alpha02"
+  const val material = "com.google.android.material:material:1.1.0-alpha03"
   const val coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
 
   const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
