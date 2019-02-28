@@ -56,8 +56,13 @@ class BottomSheetsActivity : AppCompatActivity() {
             dialog2.dismiss()
           }
 
+          val numberText = dialog2.findViewById<TextView>(R.id.checked_number)!!
+          val submit = dialog2.findViewById<Button>(R.id.submit)!!
           val recycler = dialog2.findViewById<RecyclerView>(R.id.recycler)!!
-          val adapter = AdapterSample()
+          val adapter = AdapterSample { self ->
+            submit.isEnabled = self.isCheckBoxed()
+            numberText.text = self.checkboxedItemIds().size.toString()
+          }
           recycler.adapter = adapter
           recycler.layoutManager = LinearLayoutManager(this)
 
@@ -70,7 +75,6 @@ class BottomSheetsActivity : AppCompatActivity() {
             progress.isVisible = false
           }
 
-          val submit = dialog2.findViewById<Button>(R.id.submit)!!
           submit.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
               progress.isVisible = true
@@ -96,11 +100,13 @@ suspend fun postIds(ids: List<Int>) {
   // ...
 }
 
-class AdapterSample : GroupAdapter<ViewHolder>() {
+class AdapterSample(
+  private val callback: (AdapterSample) -> Unit
+) : GroupAdapter<ViewHolder>() {
   suspend fun populateItems() {
     delay(2000)
     addAll(
-      (0..100).map { ItemSample(it) }
+      (0..100).map { ItemSample(it) { callback(this) } }
     )
   }
 
@@ -118,7 +124,8 @@ class AdapterSample : GroupAdapter<ViewHolder>() {
 }
 
 class ItemSample(
-  val itemId: Int
+  val itemId: Int,
+  private val callback: () -> Unit
 ) : Item<ViewHolder>() {
 
   var isCheckboxed: Boolean = false
@@ -128,9 +135,15 @@ class ItemSample(
 
   override fun bind(viewHolder: ViewHolder, position: Int) {
     viewHolder.root.findViewById<TextView>(R.id.title).text = id.toString()
-    viewHolder.root.findViewById<CheckBox>(R.id.checkbox).isChecked = isCheckboxed
-    viewHolder.root.findViewById<CheckBox>(R.id.checkbox).setOnCheckedChangeListener { _, isChecked ->
+
+    val checkBox = viewHolder.root.findViewById<CheckBox>(R.id.checkbox)
+    checkBox.isChecked = isCheckboxed
+    checkBox.setOnCheckedChangeListener { _, isChecked ->
       this.isCheckboxed = isChecked
+      callback()
+    }
+    viewHolder.root.setOnClickListener {
+      checkBox.toggle()
     }
   }
 }

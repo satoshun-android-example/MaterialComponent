@@ -15,15 +15,46 @@
     <androidx.appcompat.widget.Toolbar
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
-      android:layout_height="?attr/actionBarSize">
+      android:layout_height="?attr/actionBarSize"
+      app:contentInsetStart="8dp">
 
-      <ImageView
-        android:id="@+id/close"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:src="@drawable/ic_arrow_downward_black_24dp" />
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+          android:id="@+id/close"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:src="@drawable/ic_arrow_downward_black_24dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="12dp"
+          android:text="タイトル"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="@id/close"
+          app:layout_constraintStart_toEndOf="@id/close"
+          app:layout_constraintTop_toTopOf="@id/close" />
+
+        <TextView
+          android:id="@+id/checked_number"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="16dp"
+          android:textSize="20sp"
+          app:layout_constraintBottom_toBottomOf="@id/close"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@id/close"
+          tools:text="111" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
   </com.google.android.material.appbar.AppBarLayout>
 
@@ -44,11 +75,12 @@
 
   <com.google.android.material.button.MaterialButton
     android:id="@+id/submit"
-    style="@style/TextAppearance.MaterialComponents.Button"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
-    android:text="SUBMIT" />
+    android:enabled="false"
+    android:text="SUBMIT"
+    app:backgroundTint="@color/colorAccent" />
 
   <ProgressBar
     android:id="@+id/progress"
