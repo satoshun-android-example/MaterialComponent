@@ -17,8 +17,14 @@ class ExtendedFloatingButtonExampleActivity : AppCompatActivity() {
         .commit()
     }
 
+    var isShrink = false
     fab.setOnClickListener {
-      println("test")
+      if (isShrink) {
+        fab.extend()
+      } else {
+        fab.shrink()
+      }
+      isShrink = !isShrink
     }
   }
 }
