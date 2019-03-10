@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:animateLayoutChanges="true"
+  android:orientation="vertical"
+  tools:ignore="HardcodedText">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/banner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+      android:id="@+id/supporting_illustration"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="24dp"
+      android:src="@drawable/ic_mood_black_24dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/text"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="16dp"
+      android:text="Your internet connection was lost.\nWe can't upload your photo."
+      app:layout_constraintBottom_toBottomOf="@id/supporting_illustration"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/supporting_illustration"
+      app:layout_constraintTop_toTopOf="@id/supporting_illustration" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/learn_button"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="LEARN MORE"
+      app:layout_constraintEnd_toStartOf="@id/fix_it"
+      app:layout_constraintTop_toBottomOf="@id/supporting_illustration" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/fix_it"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="FIX IT"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/supporting_illustration" />
+
+    <View
+      android:id="@+id/divider"
+      android:layout_width="0dp"
+      android:layout_height="01dp"
+      android:background="@android:color/darker_gray"
+      app:layout_constraintTop_toBottomOf="@id/fix_it" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+      android:id="@+id/rootView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:text="CONTENTS" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>
