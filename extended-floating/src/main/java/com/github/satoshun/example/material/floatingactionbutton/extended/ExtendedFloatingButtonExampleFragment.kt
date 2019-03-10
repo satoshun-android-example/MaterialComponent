@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.banner_frag.*
+import kotlinx.android.synthetic.main.extended_floating_frag.*
 
-class BannerFragment : Fragment() {
+class ExtendedFloatingButtonExampleFragment : Fragment() {
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    return inflater.inflate(R.layout.banner_frag, container, false)
+    return inflater.inflate(R.layout.extended_floating_frag, container, false)
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
