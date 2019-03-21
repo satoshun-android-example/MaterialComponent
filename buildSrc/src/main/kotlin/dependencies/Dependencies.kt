@@ -7,7 +7,7 @@ const val TARGET_SDK = 28
 const val VKOTLIN = "1.3.21"
 const val VCOUROUTINE = "1.1.1"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-rc01"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-rc02"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
