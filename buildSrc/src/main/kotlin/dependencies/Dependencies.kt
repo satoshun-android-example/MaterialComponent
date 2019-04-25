@@ -4,7 +4,7 @@ const val COMPILE_SDK = 28
 const val MIN_SDK = 24
 const val TARGET_SDK = 28
 
-const val VKOTLIN = "1.3.30"
+const val VKOTLIN = "1.3.31"
 const val VCOUROUTINE = "1.2.0"
 
 const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.0-alpha13"
