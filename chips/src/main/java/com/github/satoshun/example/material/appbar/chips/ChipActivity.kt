@@ -10,9 +10,9 @@ class ChipActivity : AppCompatActivity() {
 
     if (savedInstanceState == null) {
       supportFragmentManager
-          .beginTransaction()
-          .add(R.id.container, ChipFragment())
-          .commit()
+        .beginTransaction()
+        .add(R.id.container, ChipFragment())
+        .commit()
     }
   }
 }

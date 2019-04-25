@@ -24,9 +24,6 @@ class ChipFragment : Fragment() {
     input_chip1.setOnCloseIconClickListener {
       input_groups.removeView(input_chip1)
     }
-    input_chip2.setOnCloseIconClickListener {
-      input_groups.removeView(input_chip2)
-    }
 
     editable.setOnEditorActionListener { _, actionId, _ ->
       if (actionId == EditorInfo.IME_ACTION_DONE) {

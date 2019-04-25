@@ -1,98 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:ignore="HardcodedText">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:ignore="HardcodedText">
 
   <LinearLayout
-      android:id="@+id/rootView"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.chip.ChipGroup
+      android:id="@+id/input_groups"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/input_chip1"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry"
+        app:chipIcon="@drawable/ic_mail_black_24dp"
+        app:chipIconTint="@color/design_default_color_primary" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+      android:id="@+id/choice_groups"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      app:chipSpacing="12dp">
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/choice_chip1"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/choice_chip2"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choice" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+      android:id="@+id/editable_groups"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_margin="16dp"
-      android:orientation="vertical">
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/input_groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-      <com.google.android.material.chip.Chip
-          android:id="@+id/input_chip1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Mail"
-          app:chipIcon="@drawable/ic_mail_black_24dp"
-          app:chipIconTint="@color/design_default_color_primary"
-          app:closeIconVisible="true" />
-
-      <com.google.android.material.chip.Chip
-          android:id="@+id/input_chip2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Search"
-          app:chipIcon="@drawable/ic_search_black_24dp"
-          app:chipIconTint="@color/design_default_color_primary"
-          app:closeIconVisible="true" />
-    </com.google.android.material.chip.ChipGroup>
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/choice_groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        app:chipSpacing="12dp">
-
-      <com.google.android.material.chip.Chip
-          android:id="@+id/choice_chip1"
-          style="@style/Widget.MaterialComponents.Chip.Entry"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Mail" />
-
-      <com.google.android.material.chip.Chip
-          android:id="@+id/choice_chip2"
-          style="@style/Widget.MaterialComponents.Chip.Choice"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Search" />
-    </com.google.android.material.chip.ChipGroup>
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/editable_groups"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp">
+      android:layout_marginTop="48dp">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/editable"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:imeOptions="actionDone"
-          android:singleLine="true" />
+        android:id="@+id/editable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
 
       <com.google.android.material.chip.Chip
-          android:id="@+id/editable_chip"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:visibility="gone"
-          app:chipIcon="@drawable/ic_mood_black_24dp" />
+        android:id="@+id/editable_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:chipIcon="@drawable/ic_mood_black_24dp" />
     </com.google.android.material.chip.ChipGroup>
 
     <com.google.android.material.chip.ChipGroup
-        android:id="@+id/error_groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        app:chipSpacing="12dp">
+      android:id="@+id/error_groups"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      app:chipSpacing="12dp">
 
       <com.google.android.material.chip.Chip
-          android:id="@+id/error_chip"
-          style="@style/Widget.MaterialComponents.Chip.Error"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="error" />
+        android:id="@+id/error_chip"
+        style="@style/Widget.MaterialComponents.Chip.Error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="error" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+      android:id="@+id/filter_groups"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      app:chipSpacing="12dp">
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/filter_chip1"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="filter" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/filter_chip2"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="filter" />
     </com.google.android.material.chip.ChipGroup>
   </LinearLayout>
 </androidx.core.widget.NestedScrollView>
