@@ -11,6 +11,7 @@ import android.view.inputmethod.EditorInfo
 import androidx.core.content.ContextCompat
 import androidx.core.view.postDelayed
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.chip_frag.*
 
@@ -56,9 +57,14 @@ class ChipFragment : Fragment() {
     // TODO
     filter_chip1.setShowMotionSpecResource(R.animator.test_animator)
     filter_chip1.setHideMotionSpecResource(R.animator.test_animator)
+
+    recycler.adapter = ChipAdapter()
+    recycler.layoutManager = StaggeredGridLayoutManager(
+      2,
+      StaggeredGridLayoutManager.HORIZONTAL
+    )
   }
 }
-
 
 fun Chip.setTextWithNumber(text: String, number: Long) {
   val span = SpannableString(text + number.toString())
