@@ -1,17 +1,14 @@
 package com.github.satoshun.example.material.appbar.chips
 
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
-import android.text.SpannableStringBuilder
 import android.text.style.AbsoluteSizeSpan
-import android.text.style.ForegroundColorSpan
-import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.core.content.ContextCompat
 import androidx.core.view.postDelayed
 import androidx.fragment.app.Fragment
 import com.google.android.material.chip.Chip
@@ -51,6 +48,14 @@ class ChipFragment : Fragment() {
     }
 
     spannable1.setTextWithNumber("Hello", 1000)
+
+    val icon = filter_chip1.checkedIcon!!.mutate()
+    icon.setTint(ContextCompat.getColor(activity!!, R.color.colorPrimary))
+    filter_chip1.checkedIcon = icon
+
+    // TODO
+    filter_chip1.setShowMotionSpecResource(R.animator.test_animator)
+    filter_chip1.setHideMotionSpecResource(R.animator.test_animator)
   }
 }
 

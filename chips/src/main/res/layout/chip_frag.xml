@@ -98,7 +98,9 @@
         style="@style/Widget.MaterialComponents.Chip.Filter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="filter" />
+        android:checked="true"
+        android:text="filter"
+        android:textColor="@color/colorPrimary" />
 
       <com.google.android.material.chip.Chip
         android:id="@+id/filter_chip2"
