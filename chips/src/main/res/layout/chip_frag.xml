@@ -125,6 +125,99 @@
         tools:text="test" />
     </com.google.android.material.chip.ChipGroup>
 
+    <HorizontalScrollView
+      android:id="@+id/horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.helper.widget.Flow
+          android:id="@+id/flow"
+          android:layout_width="wrap_content"
+          android:layout_height="100dp"
+          android:background="@android:color/white"
+          android:orientation="vertical"
+          app:constraint_referenced_ids="chip1,chip2,chip3,chip4,chip5,chip6,chip7,chip8,chip9,chip10"
+          app:flow_maxElementsWrap="2"
+          app:flow_wrapMode="chain"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip1"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry1" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip2"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry2" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip3"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry3" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip4"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry4" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip5"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry5" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip6"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry6" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip7"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry7" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip8"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry8" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip9"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry9" />
+
+        <com.google.android.material.chip.Chip
+          android:id="@+id/chip10"
+          style="@style/Widget.MaterialComponents.Chip.Entry"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Entry10" />s
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
     <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recycler"
       android:layout_width="match_parent"
