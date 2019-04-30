@@ -13,8 +13,8 @@
     android:startOffset="0" />
 
   <objectAnimator
-    android:duration="0"
+    android:duration="1000"
     android:interpolator="@android:anim/bounce_interpolator"
     android:propertyName="iconScale"
-    android:startOffset="0" />
+    android:startOffset="200" />
 </set>
