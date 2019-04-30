@@ -13,9 +13,9 @@ class AppbarBottomActivity : AppCompatActivity() {
 
     if (savedInstanceState == null) {
       supportFragmentManager
-          .beginTransaction()
-          .add(R.id.container, AppbarBottom1Fragment())
-          .commit()
+        .beginTransaction()
+        .add(R.id.container, AppbarBottom1Fragment())
+        .commit()
     }
   }
 

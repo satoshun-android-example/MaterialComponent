@@ -29,11 +29,11 @@ class AppbarBottom1Fragment : Fragment() {
       fab.hide()
 
       activity!!
-          .supportFragmentManager
-          .beginTransaction()
-          .replace(R.id.container, AppbarBottom2Fragment(), "this")
-          .addToBackStack("this")
-          .commit()
+        .supportFragmentManager
+        .beginTransaction()
+        .replace(R.id.container, AppbarBottom2Fragment(), "this")
+        .addToBackStack("this")
+        .commit()
     }
 
     // todo snackbar upper fab button
@@ -42,10 +42,10 @@ class AppbarBottom1Fragment : Fragment() {
       val snackbarView = snackbar.view
       val params = snackbarView.layoutParams as ViewGroup.MarginLayoutParams
       params.setMargins(
-          params.leftMargin,
-          params.topMargin,
-          params.rightMargin,
-          params.bottomMargin
+        params.leftMargin,
+        params.topMargin,
+        params.rightMargin,
+        params.bottomMargin
       )
       snackbarView.layoutParams = params
       snackbar.show()
