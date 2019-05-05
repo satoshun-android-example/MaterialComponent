@@ -89,7 +89,8 @@ class ModalBottomSheetsActivity : AppCompatActivity() {
     }
 
     fragment.setOnClickListener {
-      
+      MyBottomSheetDialogFragment()
+        .show(supportFragmentManager, "bottom-sheet")
     }
   }
 
