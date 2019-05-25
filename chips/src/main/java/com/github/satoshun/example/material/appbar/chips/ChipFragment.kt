@@ -1,5 +1,6 @@
 package com.github.satoshun.example.material.appbar.chips
 
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -53,6 +54,17 @@ class ChipFragment : Fragment() {
     val icon = filter_chip1.checkedIcon!!.mutate()
     icon.setTint(ContextCompat.getColor(activity!!, R.color.colorPrimary))
     filter_chip1.checkedIcon = icon
+    filter_chip1.setOnCheckedChangeListener { _, isChecked ->
+      if (isChecked) {
+        filter_chip1.chipStrokeWidth = 4.0f
+        filter_chip1.chipStrokeColor = ColorStateList.valueOf(ContextCompat.getColor(context!!, R.color.colorPrimary))
+        filter_chip1.chipBackgroundColor = ColorStateList.valueOf(
+          ContextCompat.getColor(context!!, R.color.colorPrimary)
+        ).withAlpha(10)
+      } else {
+        filter_chip1.chipStrokeWidth = 0f
+      }
+    }
 
     // TODO
     filter_chip1.setShowMotionSpecResource(R.animator.test_animator)
