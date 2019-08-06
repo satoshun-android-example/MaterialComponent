@@ -58,9 +58,9 @@ internal class ChipFragment : Fragment() {
       if (isChecked) {
         filter_chip1.chipStrokeWidth = 4.0f
         filter_chip1.chipStrokeColor = ColorStateList.valueOf(ContextCompat.getColor(context!!, R.color.colorPrimary))
-        filter_chip1.chipBackgroundColor = ColorStateList.valueOf(
-          ContextCompat.getColor(context!!, R.color.colorPrimary)
-        ).withAlpha(10)
+        filter_chip1.chipBackgroundColor = ColorStateList
+          .valueOf(ContextCompat.getColor(context!!, R.color.colorPrimary))
+          .withAlpha(10)
       } else {
         filter_chip1.chipStrokeWidth = 0f
       }
