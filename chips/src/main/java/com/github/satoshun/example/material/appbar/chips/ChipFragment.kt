@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.chip_frag.*
 
-class ChipFragment : Fragment() {
+internal class ChipFragment : Fragment() {
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
