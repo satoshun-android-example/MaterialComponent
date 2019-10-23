@@ -22,7 +22,7 @@ const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.0.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-alpha5"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
-const val MATERIAL = "com.google.android.material:material:1.1.0-alpha09"
+const val MATERIAL = "com.google.android.material:material:1.1.0-alpha10"
 const val COORDINATORLAYOUT = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
 
 const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"

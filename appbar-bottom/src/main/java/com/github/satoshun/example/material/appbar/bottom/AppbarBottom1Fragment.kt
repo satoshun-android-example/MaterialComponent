@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.material.behavior.SwipeDismissBehavior
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.appbar_bottom1_frag.*
 
@@ -49,6 +51,10 @@ class AppbarBottom1Fragment : Fragment() {
       )
       snackbarView.layoutParams = params
       snackbar.show()
+
+      snackbar.behavior = BaseTransientBottomBar.Behavior().apply {
+        setSwipeDirection(SwipeDismissBehavior.SWIPE_DIRECTION_ANY)
+      }
     }
 
     // todo use FloatingActionButton.OnVisibilityChangedListener
