@@ -4,10 +4,10 @@ const val COMPILE_SDK = 28
 const val MIN_SDK = 24
 const val TARGET_SDK = 28
 
-const val VKOTLIN = "1.3.41"
+const val VKOTLIN = "1.3.50"
 const val VCOUROUTINE = "1.2.1"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.0"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.1"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
@@ -22,7 +22,7 @@ const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.0.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-alpha5"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
-const val MATERIAL = "com.google.android.material:material:1.1.0-alpha10"
+const val MATERIAL = "com.google.android.material:material:1.1.0-beta01"
 const val COORDINATORLAYOUT = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
 
 const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
