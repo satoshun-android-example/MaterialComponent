@@ -6,8 +6,20 @@
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
 
-    <item name="bottomSheetDialogTheme">@style/ShapeCustomBottomSheetDialog</item>
+    <!--    <item name="bottomSheetDialogTheme">@style/ShapeCustomBottomSheetDialog</item>-->
+    <item name="bottomSheetDialogTheme">@style/BackgroundCustomBottomSheetDialog</item>
   </style>
+
+  <!-- Background -->
+  <style name="BackgroundCustomBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/Widget.BottomSheetDialog.Background</item>
+  </style>
+
+  <style name="Widget.BottomSheetDialog.Background" parent="Theme.MaterialComponents.BottomSheetDialog">
+    <item name="android:background">@drawable/rounded_dialog</item>
+  </style>
+
+  <!-- Shape -->
 
   <style name="ShapeCustomBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
     <item name="bottomSheetStyle">@style/Widget.BottomSheetDialog</item>
