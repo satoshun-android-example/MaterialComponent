@@ -1,13 +1,13 @@
 package dependencies
 
-const val COMPILE_SDK = 28
+const val COMPILE_SDK = 29
 const val MIN_SDK = 24
-const val TARGET_SDK = 28
+const val TARGET_SDK = 29
 
-const val VKOTLIN = "1.3.50"
-const val VCOUROUTINE = "1.2.1"
+const val VKOTLIN = "1.3.60"
+const val VCOUROUTINE = "1.3.2"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.1"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.2"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
