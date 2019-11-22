@@ -17,8 +17,8 @@ const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOU
 
 const val KTX = "androidx.core:core-ktx:1.0.1"
 
-const val APPCOMPAT = "androidx.appcompat:appcompat:1.0.2"
-const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.0.0"
+const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0"
+const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-beta3"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 

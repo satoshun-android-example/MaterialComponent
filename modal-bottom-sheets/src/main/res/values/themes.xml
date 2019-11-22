@@ -31,12 +31,12 @@
     <item name="bottomSheetStyle">@style/Widget.BottomSheetDialog</item>
   </style>
 
-  <style name="Widget.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+  <style name="Widget.BottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
     <item name="shapeAppearance">@style/Widget.Shape.Basic</item>
     <!--    <item name="shapeAppearanceOverlay">@style/Widget.Shape.Basic</item>-->
   </style>
 
-  <style name="Widget.Shape.Basic" parent="">
+  <style name="Widget.Shape.Basic" parent="ShapeAppearance.MaterialComponents.LargeComponent">
     <item name="cornerFamily">rounded</item>
 
     <item name="cornerSize">12dp</item>
