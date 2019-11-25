@@ -1,6 +1,6 @@
 <resources>
 
-  <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+  <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -9,11 +9,25 @@
     <item name="bottomSheetDialogTheme">@style/ShapeCustomBottomSheetDialog</item>
     <!--    <item name="bottomSheetDialogTheme">@style/BackgroundCustomBottomSheetDialog</item>-->
     <!--    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Sample.LargeComponent</item>-->
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Sample.SmallComponent</item>
   </style>
 
-  <style name="ShapeAppearance.Sample.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+  <style name="ShapeAppearance.Sample.SmallComponent" parent="">
     <item name="cornerFamily">rounded</item>
-    <item name="cornerSize">12dp</item>
+
+    <item name="cornerSize">50%</item>
+  </style>
+
+  <style name="ShapeAppearance.Sample.MediumComponent" parent="">
+    <item name="cornerFamily">cut</item>
+
+    <item name="cornerSize">16dp</item>
+  </style>
+
+  <style name="ShapeAppearance.Sample.LargeComponent" parent="">
+    <item name="cornerFamily">rounded</item>
+
+    <item name="cornerSize">36dp</item>
   </style>
 
   <!-- Background -->
@@ -28,22 +42,23 @@
   <!-- Shape -->
 
   <style name="ShapeCustomBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
-    <item name="bottomSheetStyle">@style/Widget.BottomSheetDialog</item>
+    <item name="bottomSheetStyle">@style/Widget.Sample.BottomSheetDialog</item>
   </style>
 
-  <style name="Widget.BottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
-    <item name="shapeAppearance">@style/Widget.Shape.Basic</item>
-    <!--    <item name="shapeAppearanceOverlay">@style/Widget.Shape.Basic</item>-->
+  <style name="Widget.Sample.BottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
+    <item name="shapeAppearance">@style/ShapeAppearance.Sample.Basic</item>
   </style>
 
-  <style name="Widget.Shape.Basic" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+  <style name="ShapeAppearance.Sample.Basic" parent="Widget.MaterialComponents.Button">
     <item name="cornerFamily">rounded</item>
 
-    <item name="cornerSize">12dp</item>
+    <item name="cornerSizeTopRight">12dp</item>
+    <item name="cornerSizeTopLeft">12dp</item>
+  </style>
 
-    <!--    <item name="cornerSizeTopRight">8dp</item>-->
-    <!--    <item name="cornerSizeTopLeft">8dp</item>-->
-    <item name="cornerSizeBottomRight">0dp</item>
-    <item name="cornerSizeBottomLeft">0dp</item>
+  <style name="ShapeAppearance.Sample.Circle" parent="">
+    <item name="cornerFamily">rounded</item>
+
+    <item name="cornerSize">50%</item>
   </style>
 </resources>

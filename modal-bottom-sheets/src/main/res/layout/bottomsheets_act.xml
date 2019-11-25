@@ -19,7 +19,8 @@
       android:text="Show Dialog"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      app:shapeAppearance="@style/ShapeAppearance.Sample.MediumComponent" />
 
     <com.google.android.material.button.MaterialButton
       android:id="@+id/fragment"
@@ -28,7 +29,14 @@
       android:layout_marginTop="32dp"
       android:text="Show Fragment"
       app:layout_constraintEnd_toEndOf="@id/dialog"
+      app:shapeAppearance="@style/ShapeAppearance.Sample.MediumComponent"
       app:layout_constraintStart_toStartOf="@id/dialog"
       app:layout_constraintTop_toBottomOf="@id/dialog" />
+
+    <com.google.android.material.button.MaterialButton
+      android:layout_width="120dp"
+      android:layout_height="120dp"
+      android:background="@drawable/ic_menu_24"
+      app:shapeAppearance="@style/ShapeAppearance.Sample.MediumComponent" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
