@@ -9,7 +9,7 @@
     <item name="bottomSheetDialogTheme">@style/ShapeCustomBottomSheetDialog</item>
     <!--    <item name="bottomSheetDialogTheme">@style/BackgroundCustomBottomSheetDialog</item>-->
     <!--    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Sample.LargeComponent</item>-->
-    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Sample.SmallComponent</item>
+    <!--    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Sample.SmallComponent</item>-->
   </style>
 
   <style name="ShapeAppearance.Sample.SmallComponent" parent="">
@@ -45,13 +45,11 @@
     <item name="bottomSheetStyle">@style/Widget.Sample.BottomSheetDialog</item>
   </style>
 
-  <style name="Widget.Sample.BottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
-    <item name="shapeAppearance">@style/ShapeAppearance.Sample.Basic</item>
+  <style name="Widget.Sample.BottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
+    <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Sample.Basic</item>
   </style>
 
-  <style name="ShapeAppearance.Sample.Basic" parent="Widget.MaterialComponents.Button">
-    <item name="cornerFamily">rounded</item>
-
+  <style name="ShapeAppearanceOverlay.Sample.Basic" parent="">
     <item name="cornerSizeTopRight">12dp</item>
     <item name="cornerSizeTopLeft">12dp</item>
   </style>
