@@ -1,4 +1,5 @@
 <resources>
+
   <style name="AppTheme" parent="Theme.MaterialComponents.Light">
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary</item>
@@ -11,5 +12,14 @@
 
     <item name="chipBackgroundColor">#FFa9B4</item>
     <item name="closeIconTint">#FF3355</item>
+  </style>
+
+  <style name="Widget.Example.Chip.Small" parent="Widget.MaterialComponents.Chip.Action">
+    <item name="chipMinHeight">24dp</item>
+    <item name="chipMinTouchTargetSize">24dp</item>
+    <item name="textStartPadding">3dp</item>
+    <item name="textEndPadding">3dp</item>
+
+    <item name="android:maxWidth">150dp</item>
   </style>
 </resources>

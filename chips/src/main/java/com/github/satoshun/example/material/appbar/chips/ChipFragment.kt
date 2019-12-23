@@ -1,5 +1,6 @@
 package com.github.satoshun.example.material.appbar.chips
 
+import android.content.Context
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.Spannable
@@ -9,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.annotation.Px
 import androidx.core.content.ContextCompat
 import androidx.core.view.postDelayed
 import androidx.fragment.app.Fragment
@@ -19,6 +21,17 @@ import kotlinx.android.synthetic.main.chip_frag.*
 internal class ChipFragment : Fragment(R.layout.chip_frag) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+
+    rootView.addView(
+      Chip(requireContext(), null, R.style.Widget_Example_Chip_Small).apply {
+        text = "test"
+        layoutParams = ViewGroup.MarginLayoutParams(
+          ViewGroup.LayoutParams.WRAP_CONTENT,
+          24.dpToPx(requireContext())
+        )
+      },
+      0
+    )
 
     input_chip1.setOnCloseIconClickListener {
       input_groups.removeView(input_chip1)
@@ -88,3 +101,6 @@ fun Chip.setTextWithNumber(text: String, number: Long) {
 
   setText(span)
 }
+
+@Px
+fun Int.dpToPx(context: Context): Int = (this * context.resources.displayMetrics.density).toInt()

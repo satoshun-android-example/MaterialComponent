@@ -16,10 +16,15 @@
     <com.google.android.material.chip.Chip
       android:layout_width="wrap_content"
       android:layout_height="24dp"
+      android:layout_marginEnd="6dp"
       android:layout_marginBottom="14dp"
+      android:maxWidth="150dp"
       android:text="MIN HEIGHT"
+      app:chipBackgroundColor="@color/cardview_dark_background"
       app:chipMinHeight="24dp"
-      app:chipMinTouchTargetSize="24dp" />
+      app:chipMinTouchTargetSize="24dp"
+      app:textEndPadding="3dp"
+      app:textStartPadding="3dp" />
 
     <com.google.android.material.chip.Chip
       android:layout_width="wrap_content"
