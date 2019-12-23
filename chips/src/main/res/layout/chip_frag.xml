@@ -15,7 +15,8 @@
 
     <com.google.android.material.chip.Chip
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_height="24dp"
+      android:layout_marginBottom="14dp"
       android:text="MIN HEIGHT"
       app:chipMinHeight="24dp"
       app:chipMinTouchTargetSize="24dp" />
