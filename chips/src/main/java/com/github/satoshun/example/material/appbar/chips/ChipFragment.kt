@@ -27,8 +27,11 @@ internal class ChipFragment : Fragment(R.layout.chip_frag) {
         text = "test"
         layoutParams = ViewGroup.MarginLayoutParams(
           ViewGroup.LayoutParams.WRAP_CONTENT,
-          24.dpToPx(requireContext())
+          ViewGroup.LayoutParams.WRAP_CONTENT
+//          24.dpToPx(requireContext())
         )
+//        chipMinHeight = 24.dpToPx(requireContext()).toFloat()
+//        ensureAccessibleTouchTarget(24.dpToPx(requireContext()))
       },
       0
     )
