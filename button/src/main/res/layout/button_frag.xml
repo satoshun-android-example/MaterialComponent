@@ -14,16 +14,18 @@
 
   <com.google.android.material.imageview.ShapeableImageView
     android:id="@+id/shapeable"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
     android:layout_gravity="center"
     android:layout_margin="10dp"
     android:adjustViewBounds="true"
     android:elevation="4dp"
-    android:scaleType="fitXY"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+    app:shapeAppearance="@style/ShapeAppearance.Example.PILL"
     app:srcCompat="@drawable/img"
     app:strokeColor="?attr/colorSecondary"
-    app:strokeWidth="1dp" />
+    app:strokeWidth="5dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

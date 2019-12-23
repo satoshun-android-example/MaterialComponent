@@ -1,4 +1,5 @@
 <resources>
+
   <style name="AppTheme" parent="Theme.MaterialComponents.Light">
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary</item>
@@ -11,5 +12,10 @@
 
     <item name="chipBackgroundColor">#FFa9B4</item>
     <item name="closeIconTint">#FF3355</item>
+  </style>
+
+  <style name="ShapeAppearance.Example.PILL" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">50%</item>
   </style>
 </resources>
