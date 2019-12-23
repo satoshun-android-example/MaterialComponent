@@ -11,4 +11,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintBottom_toBottomOf="parent" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/shapeable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:adjustViewBounds="true"
+    android:elevation="4dp"
+    android:scaleType="fitXY"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+    app:srcCompat="@drawable/img"
+    app:strokeColor="?attr/colorSecondary"
+    app:strokeWidth="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
