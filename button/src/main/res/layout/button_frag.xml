@@ -40,7 +40,6 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/circle"
     app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.Diamond"
-    app:srcCompat="@drawable/img"
     app:strokeColor="?attr/colorSecondary"
     app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

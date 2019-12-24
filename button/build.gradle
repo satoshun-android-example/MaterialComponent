@@ -40,6 +40,8 @@ dependencies {
   implementation UI_COROUTINE
   implementation COROUTINE_BINDING
 
+  implementation GLIDE
+
   testImplementation JUNIT
 
   androidTestImplementation TEST_RUNNER

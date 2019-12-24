@@ -40,6 +40,8 @@ const val COROUTINE_BINDING = "com.github.satoshun.coroutinebinding:coroutinebin
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
+const val GLIDE = "com.github.bumptech.glide:glide:4.10.0"
+
 const val JUNIT = "junit:junit:4.12"
 const val TRUTH = "com.google.truth:truth:0.39"
 const val MOCKITO_KOTLIN = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
