@@ -13,9 +13,24 @@
     app:layout_constraintBottom_toBottomOf="parent" />
 
   <com.google.android.material.imageview.ShapeableImageView
-    android:id="@+id/shapeable"
-    android:layout_width="300dp"
-    android:layout_height="300dp"
+    android:id="@+id/circle"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:adjustViewBounds="true"
+    android:elevation="4dp"
+    app:layout_constraintBottom_toTopOf="@id/diamond"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.PILL"
+    app:srcCompat="@drawable/img" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/diamond"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
     android:layout_gravity="center"
     android:layout_margin="10dp"
     android:adjustViewBounds="true"
@@ -23,9 +38,9 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:shapeAppearance="@style/ShapeAppearance.Example.PILL"
+    app:layout_constraintTop_toBottomOf="@id/circle"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.Diamond"
     app:srcCompat="@drawable/img"
     app:strokeColor="?attr/colorSecondary"
-    app:strokeWidth="5dp" />
+    app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
