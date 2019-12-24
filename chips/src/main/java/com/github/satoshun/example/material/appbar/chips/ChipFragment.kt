@@ -8,7 +8,6 @@ import android.text.SpannableString
 import android.text.style.AbsoluteSizeSpan
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.annotation.Px
 import androidx.core.content.ContextCompat
@@ -22,17 +21,21 @@ internal class ChipFragment : Fragment(R.layout.chip_frag) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
+    val inflater = LayoutInflater.from(requireContext())
     rootView.addView(
-      Chip(requireContext(), null, R.style.Widget_Example_Chip_Small).apply {
-        text = "test"
-        layoutParams = ViewGroup.MarginLayoutParams(
-          ViewGroup.LayoutParams.WRAP_CONTENT,
-          ViewGroup.LayoutParams.WRAP_CONTENT
-//          24.dpToPx(requireContext())
-        )
-//        chipMinHeight = 24.dpToPx(requireContext()).toFloat()
-//        ensureAccessibleTouchTarget(24.dpToPx(requireContext()))
+      (inflater.inflate(R.layout.chip, rootView, false) as Chip).apply {
+        text = "TEATTEST"
       },
+//      Chip(requireContext(), null, R.style.Widget_Example_Chip_Small).apply {
+//        text = "test"
+//        layoutParams = ViewGroup.MarginLayoutParams(
+//          ViewGroup.LayoutParams.WRAP_CONTENT,
+//          ViewGroup.LayoutParams.WRAP_CONTENT
+////          24.dpToPx(requireContext())
+//        )
+////        chipMinHeight = 24.dpToPx(requireContext()).toFloat()
+////        ensureAccessibleTouchTarget(24.dpToPx(requireContext()))
+//      },
       0
     )
 
