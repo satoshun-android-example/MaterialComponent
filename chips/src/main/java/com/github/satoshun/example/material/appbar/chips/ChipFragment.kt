@@ -9,6 +9,7 @@ import android.text.style.AbsoluteSizeSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.annotation.Px
 import androidx.core.content.ContextCompat
 import androidx.core.view.postDelayed
@@ -24,7 +25,7 @@ internal class ChipFragment : Fragment(R.layout.chip_frag) {
     val inflater = LayoutInflater.from(requireContext())
     rootView.addView(
       (inflater.inflate(R.layout.chip, rootView, false) as Chip).apply {
-        text = "TEATTEST"
+        text = "TESTTEST"
       },
 //      Chip(requireContext(), null, R.style.Widget_Example_Chip_Small).apply {
 //        text = "test"
@@ -38,6 +39,17 @@ internal class ChipFragment : Fragment(R.layout.chip_frag) {
 //      },
       0
     )
+
+    checkable_false.setOnLongClickListener {
+      Toast
+        .makeText(context, "HIOGE", Toast.LENGTH_LONG)
+        .show()
+
+      true
+    }
+    checkable_false.setOnCheckedChangeListener { buttonView, isChecked ->
+      buttonView.isChecked = !isChecked
+    }
 
     input_chip1.setOnCloseIconClickListener {
       input_groups.removeView(input_chip1)
