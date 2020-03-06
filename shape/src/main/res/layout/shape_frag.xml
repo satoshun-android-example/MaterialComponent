@@ -6,10 +6,17 @@
   android:orientation="vertical"
   tools:ignore="HardcodedText">
 
-  <TextView
-    android:id="@+id/shape"
+  <FrameLayout
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:text="SHAPE" />
+    android:clipChildren="false">
+
+    <TextView
+      android:id="@+id/shape"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dp"
+      android:text="SHAPE" />
+  </FrameLayout>
 </LinearLayout>
