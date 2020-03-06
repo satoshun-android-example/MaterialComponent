@@ -11,3 +11,5 @@ include ':extended-floating'
 include ':floating-action-button'
 include ':button'
 include ':tablayout'
+
+include ':shape'
