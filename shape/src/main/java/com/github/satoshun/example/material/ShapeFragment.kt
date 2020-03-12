@@ -20,6 +20,8 @@ class ShapeFragment : Fragment(R.layout.shape_frag) {
 
     binding.frame.setOnClickListener {
     }
+    binding.frame2.setOnClickListener {
+    }
   }
 
   private fun createTooltipBackground(): Drawable {
