@@ -17,6 +17,9 @@ class ShapeFragment : Fragment(R.layout.shape_frag) {
 
     binding.shape.background = createTooltipBackground()
     binding.inset.background = InsetDrawable(createTooltipBackground(), 0, 50, 0, 50)
+
+    binding.frame.setOnClickListener {
+    }
   }
 
   private fun createTooltipBackground(): Drawable {
