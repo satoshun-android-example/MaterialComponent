@@ -23,4 +23,24 @@
     <item name="cornerFamily">cut</item>
     <item name="cornerSize">50%</item>
   </style>
+
+  <style name="ShapeAppearance.Example.TopLeftCircle" parent="">
+    <item name="cornerFamilyTopLeft">rounded</item>
+    <item name="cornerSizeTopLeft">100%</item>
+  </style>
+
+  <style name="ShapeAppearance.Example.TopRightCircle" parent="">
+    <item name="cornerFamilyTopRight">rounded</item>
+    <item name="cornerSizeTopRight">100%</item>
+  </style>
+
+  <style name="ShapeAppearance.Example.BottomLeftCircle" parent="">
+    <item name="cornerFamilyBottomLeft">rounded</item>
+    <item name="cornerSizeBottomLeft">100%</item>
+  </style>
+
+  <style name="ShapeAppearance.Example.BottomRightCircle" parent="">
+    <item name="cornerFamilyBottomRight">rounded</item>
+    <item name="cornerSizeBottomRight">100%</item>
+  </style>
 </resources>

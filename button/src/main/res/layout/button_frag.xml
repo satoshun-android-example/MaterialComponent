@@ -22,7 +22,6 @@
     android:elevation="4dp"
     app:layout_constraintBottom_toTopOf="@id/diamond"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.PILL"
     app:srcCompat="@drawable/img" />
@@ -37,9 +36,52 @@
     android:elevation="4dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/circle"
     app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.Diamond"
     app:strokeColor="?attr/colorSecondary"
     app:strokeWidth="2dp" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/parts1"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.TopLeftCircle"
+    app:srcCompat="@drawable/img" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/parts2"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toEndOf="@id/parts1"
+    app:layout_constraintTop_toTopOf="@id/parts1"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.TopRightCircle"
+    app:srcCompat="@drawable/img2" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/parts3"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toStartOf="@id/parts1"
+    app:layout_constraintTop_toBottomOf="@id/parts1"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.BottomLeftCircle"
+    app:srcCompat="@drawable/img2" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/parts4"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toEndOf="@id/parts3"
+    app:layout_constraintTop_toBottomOf="@id/parts2"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Example.BottomRightCircle"
+    app:srcCompat="@drawable/img" />
 </androidx.constraintlayout.widget.ConstraintLayout>
