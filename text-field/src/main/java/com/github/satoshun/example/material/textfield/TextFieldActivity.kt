@@ -13,5 +13,10 @@ class TextFieldActivity : AppCompatActivity() {
     val basic = findViewById<TextInputLayout>(R.id.basic)
     basic.endIconView().scaleX = 0.5f
     basic.endIconView().scaleY = 0.5f
+
+    val circle = findViewById<TextInputLayout>(R.id.circle)
+//    val drawable = getDrawable(R.drawable.ic_android_black_24dp)
+//    circle.startIconDrawable = ScaleDrawable(drawable, Gravity.BOTTOM, 0.9f, 0.9f)
+//    circle.startIconDrawable = getDrawable(R.drawable.ic_android_black_24dp)
   }
 }

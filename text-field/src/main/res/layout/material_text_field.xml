@@ -24,7 +24,7 @@
     app:endIconTint="@color/colorAccent"
     app:helperText="helper"
     app:hintEnabled="false"
-    app:startIconDrawable="@drawable/ic_android_black_16dp">
+    app:startIconDrawable="@drawable/ic_android_black_12dp">
 
     <com.google.android.material.textfield.TextInputEditText
       android:id="@+id/circle_edit"
