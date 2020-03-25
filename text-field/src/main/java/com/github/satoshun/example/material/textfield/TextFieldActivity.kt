@@ -1,6 +1,7 @@
 package com.github.satoshun.example.material.textfield
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 import com.google.android.material.textfield.endIconView
@@ -15,6 +16,9 @@ class TextFieldActivity : AppCompatActivity() {
     basic.endIconView().scaleY = 0.5f
 
     val circle = findViewById<TextInputLayout>(R.id.circle)
+    circle.setStartIconOnClickListener {
+      Toast.makeText(this@TextFieldActivity, "StartIcon", Toast.LENGTH_LONG).show()
+    }
 //    val drawable = getDrawable(R.drawable.ic_android_black_24dp)
 //    circle.startIconDrawable = ScaleDrawable(drawable, Gravity.BOTTOM, 0.9f, 0.9f)
 //    circle.startIconDrawable = getDrawable(R.drawable.ic_android_black_24dp)
