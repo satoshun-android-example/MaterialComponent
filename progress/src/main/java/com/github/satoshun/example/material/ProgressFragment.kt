@@ -22,5 +22,14 @@ class ProgressFragment : Fragment(R.layout.progress_frag) {
         delay(100)
       }
     }
+
+    var progress2 = 0
+    viewLifecycleOwner.lifecycleScope.launch {
+      while (progress2 <= 100) {
+        progress2 += 1
+        binding.progress4.setProgress(progress2, true)
+        delay(100)
+      }
+    }
   }
 }

@@ -18,7 +18,8 @@
     style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:layout_marginTop="32dp" />
+    android:layout_marginTop="32dp"
+    android:max="100" />
 
   <com.google.android.material.progressindicator.ProgressIndicator
     android:id="@+id/progress3"
@@ -26,4 +27,12 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_marginTop="32dp" />
+
+  <ProgressBar
+    android:id="@+id/progress4"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="32dp"
+    android:max="100" />
 </LinearLayout>
