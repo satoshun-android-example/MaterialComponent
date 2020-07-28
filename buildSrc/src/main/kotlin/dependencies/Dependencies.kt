@@ -22,12 +22,15 @@ const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-beta3"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
-const val MATERIAL = "com.google.android.material:material:1.2.0-alpha06"
+const val MATERIAL = "com.google.android.material:material:1.3.0-alpha02"
 const val COORDINATORLAYOUT = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
 
-const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
-const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata:2.0.0"
-const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
+const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.2.0"
+
+const val ACTIVITY = "androidx.activity:activity-ktx:1.1.0"
+const val FRAGMENT = "androidx.fragment:fragment-ktx:1.2.5"
 
 const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"

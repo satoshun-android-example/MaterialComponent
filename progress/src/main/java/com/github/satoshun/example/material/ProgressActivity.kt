@@ -1,18 +1,17 @@
-package com.github.satoshun.example.material.appbar.cards
+package com.github.satoshun.example.material
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class CardActivity : AppCompatActivity() {
+class ProgressActivity : AppCompatActivity(R.layout.progress_act) {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.card_act)
 
     if (savedInstanceState == null) {
       supportFragmentManager
-          .beginTransaction()
-          .add(R.id.container, CardFragment())
-          .commit()
+        .beginTransaction()
+        .add(R.id.container, ProgressFragment())
+        .commit()
     }
   }
 }
