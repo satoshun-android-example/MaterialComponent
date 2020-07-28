@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:ignore="HardcodedText">
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/card1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+          android:id="@+id/image"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:adjustViewBounds="true"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_launcher_background"
+          app:layout_constraintDimensionRatio="16:9"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/title"
+          style="@style/TextAppearance.MaterialComponents.Headline6"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="12dp"
+          android:layout_marginEnd="16dp"
+          android:text="Title goes here"
+          app:layout_constraintEnd_toEndOf="@id/image"
+          app:layout_constraintStart_toStartOf="@id/image"
+          app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <TextView
+          android:id="@+id/secondary_text"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="secondary text"
+          app:layout_constraintEnd_toEndOf="@id/title"
+          app:layout_constraintStart_toStartOf="@id/title"
+          app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <TextView
+          android:id="@+id/supporting_text"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="supporting text"
+          app:layout_constraintEnd_toEndOf="@id/secondary_text"
+          app:layout_constraintStart_toStartOf="@id/secondary_text"
+          app:layout_constraintTop_toBottomOf="@id/secondary_text" />
+
+        <View
+          android:id="@+id/divider"
+          android:layout_width="0dp"
+          android:layout_height="0.5dp"
+          android:layout_marginTop="20dp"
+          android:background="#cccccc"
+          app:layout_constraintEnd_toEndOf="@id/supporting_text"
+          app:layout_constraintStart_toStartOf="@id/supporting_text"
+          app:layout_constraintTop_toBottomOf="@id/supporting_text" />
+
+        <TextView
+          android:id="@+id/expand"
+          style="@style/TextAppearance.MaterialComponents.Button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="EXPAND"
+          android:textColor="#9400D3"
+          app:layout_constraintStart_toStartOf="@id/divider"
+          app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+          android:id="@+id/expanded_title"
+          style="@style/TextAppearance.MaterialComponents.Subtitle1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="expanded title"
+          android:visibility="gone"
+          app:layout_constraintEnd_toEndOf="@id/divider"
+          app:layout_constraintStart_toStartOf="@id/divider"
+          app:layout_constraintTop_toBottomOf="@id/divider"
+          tools:visibility="visible" />
+
+        <com.google.android.material.chip.ChipGroup
+          android:id="@+id/action_group"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:visibility="gone"
+          app:chipSpacing="16dp"
+          app:layout_constraintEnd_toEndOf="@id/expanded_title"
+          app:layout_constraintStart_toStartOf="@id/expanded_title"
+          app:layout_constraintTop_toBottomOf="@id/expanded_title"
+          tools:visibility="visible">
+
+          <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5:30PM" />
+
+          <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7:30PM" />
+
+          <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00PM" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+          android:id="@+id/collapse"
+          style="@style/TextAppearance.MaterialComponents.Button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:text="COLLAPSE"
+          android:textColor="#9400D3"
+          android:visibility="gone"
+          app:layout_constraintStart_toStartOf="@id/action_group"
+          app:layout_constraintTop_toBottomOf="@id/action_group"
+          tools:visibility="visible" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+  </FrameLayout>
+</androidx.core.widget.NestedScrollView>
